@@ -1,0 +1,4 @@
+msrestazure>=0.6.1
+azure-mgmt-resource>=3.0.0
+azure-mgmt-datafactory
+azure-mgmt-sql
