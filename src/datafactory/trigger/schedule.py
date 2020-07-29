@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+import datetime
+
 from azure.mgmt.datafactory.models import PipelineReference
 from azure.mgmt.datafactory.models import ScheduleTrigger
 from azure.mgmt.datafactory.models import TriggerPipelineReference
@@ -11,8 +13,8 @@ def daily_trigger(adf, pipeline_name):
     scheduler_recurrence = ScheduleTriggerRecurrence(
         frequency='Day', 
         interval='15',
-        start_time='2019-08-29T11:43:00',
-        end_time='2019-09-01T05:00:00',
+        start_time=datetime.datetime.now().strftime('%Y-%m-%dT%H:%M:%S'),
+        end_time=None,
         time_zone='UTC'
     )
     
